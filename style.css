@@ -1,0 +1,111 @@
+/* style.css - 高品質・アクセシビリティ重視のスタイル
+   - カラー変数、アクセシビリティ、prefers-reduced-motion 対応
+*/
+
+/* ================ :root / カラーパレット / レスポンシブ基準 ================ */
+:root{
+  --max-width:1100px;
+  --color-navy: #0A1E40;
+  --color-deepgreen: #385E48;
+  --color-gold: #B8860B;
+  --bg: #F7F4EC;
+  --text: #222222;
+  --muted: #666666;
+  --radius: 8px;
+  --transition-fast: 180ms;
+  --transition-mid: 300ms;
+  --focus-ring: 3px;
+  --gap: 16px;
+}
+
+/* ベースリセット */
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; height:100%; background:var(--bg); color:var(--text); font-family: "Yu Gothic", "游ゴシック体", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+a { color:inherit; text-decoration:none; }
+.container{ max-width:var(--max-width); margin:0 auto; padding:0 16px; }
+
+/* Skip link */
+.skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip-link:focus { left:16px; top:16px; width:auto; height:auto; background:#fff; padding:8px 12px; border-radius:6px; z-index:9999; }
+
+/* ================ ヘッダー ================ */
+.site-header { background:#fff; border-bottom:1px solid #e6e1d8; position:sticky; top:0; z-index:1000; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0; }
+.brand { display:flex; align-items:center; gap:12px; }
+.logo { width:56px; height:auto; display:block; }
+.school-name h1 { font-family: "Source Han Serif JP", "游明朝体", serif; font-size:18px; margin:0; color:var(--color-navy); }
+.catch { margin:0; font-size:12px; color:var(--color-deepgreen); }
+
+/* nav */
+.nav-toggle { display:none; background:none; border:none; font-size:20px; cursor:pointer; padding:8px; }
+.main-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:12px; align-items:center; }
+.main-nav a { color:var(--color-navy); padding:8px 10px; border-radius:6px; font-weight:600; }
+.main-nav a:focus, .main-nav a:hover { background:rgba(10,30,64,0.05); outline:none; box-shadow:0 0 0 var(--focus-ring) rgba(10,30,64,0.08); }
+
+/* ================ スライダー ================ */
+.slider { position:relative; overflow:hidden; background:#000; color:#fff; }
+.slides { position:relative; height:60vh; min-height:320px; }
+.slide { position:absolute; inset:0; opacity:0; transition: opacity 1s ease; display:flex; align-items:flex-end; justify-content:center; will-change:opacity; }
+.slide img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.68); }
+.slide.active { opacity:1; z-index:2; pointer-events:auto; }
+.caption { position:absolute; bottom:6%; left:50%; transform:translateX(-50%); background:linear-gradient(180deg, rgba(10,30,64,0.6), rgba(10,30,64,0.5)); color:#fff; padding:14px 20px; border-radius:var(--radius); font-weight:700; max-width:88%; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+
+/* controls */
+.slider-controls { position:absolute; left:0; right:0; bottom:12px; display:flex; align-items:center; justify-content:center; gap:12px; z-index:10; }
+.prev, .next { background:rgba(255,255,255,0.12); border:none; color:#fff; font-size:28px; padding:8px 12px; border-radius:8px; cursor:pointer; transition:transform var(--transition-fast); }
+.prev:active,.next:active{ transform:scale(0.98); }
+.dots { display:flex; gap:8px; align-items:center; }
+.dot { width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,0.4); border:none; cursor:pointer; }
+.dot.active { background:var(--color-gold); }
+
+/* ================ セクション共通 ================ */
+.section { padding:56px 0; }
+.section h2 { font-family: "Source Han Serif JP", "游明朝体", serif; color:var(--color-navy); font-size:26px; margin-bottom:12px; }
+.section p { color:var(--muted); line-height:1.8; }
+
+/* アコーディオン */
+.accordion { border-top:1px solid #e6e1d8; margin-top:20px; background:transparent; border-radius:6px; overflow:hidden; }
+.accordion-item { border-bottom:1px solid #e6e1d8; background:#fff; }
+.accordion-btn { width:100%; text-align:left; padding:16px; background:transparent; border:none; font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:16px; }
+.accordion-btn:focus { outline:none; box-shadow:0 0 0 var(--focus-ring) rgba(10,30,64,0.12); }
+.accordion-panel { padding:14px 16px; color:var(--muted); }
+
+/* ギャラリー / 施設 */
+.gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+.gallery figure { margin:0; background:#fff; padding:8px; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.04); }
+.gallery img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+figcaption { margin-top:8px; font-size:14px; color:var(--muted); }
+
+/* facility-list */
+.facility-list { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+.facility-list article { background:#fff; padding:12px; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.04); }
+.facility-list img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+
+/* フォーム */
+.contact-form { background:#fff; padding:18px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.06); }
+.form-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; }
+.contact-form label { display:block; font-size:14px; color:var(--text); }
+.contact-form input, .contact-form select, .contact-form textarea { width:100%; padding:10px; border:1px solid #e6e1d8; border-radius:6px; font-size:14px; background:#fff; }
+.contact-form .full { grid-column: 1 / -1; }
+.form-actions { margin-top:12px; text-align:right; }
+.btn-submit { background:var(--color-navy); color:#fff; padding:12px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:800; }
+.btn-submit:focus { outline:none; box-shadow:0 0 0 var(--focus-ring) rgba(10,30,64,0.12); }
+
+/* フッター */
+.site-footer { padding:20px 0; background:#fff; border-top:1px solid #e6e1d8; margin-top:28px; }
+.site-footer p { color:var(--muted); font-size:13px; margin:6px 0; }
+
+/* ================ メディアクエリ ================ */
+@media (max-width: 900px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .main-nav ul { display:none; }
+  .nav-toggle { display:block; }
+  .caption { font-size:14px; padding:10px 14px; bottom:4%; }
+  .slides { height:48vh; min-height:220px; }
+}
+
+/* ================ アクセシビリティ設定 ================ */
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slide, .caption, .dot, .prev, .next { transition:none !important; animation:none !important; }
+}
