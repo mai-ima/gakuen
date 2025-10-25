@@ -5,37 +5,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>緑風高等学院 公式サイト | 120年の歴史と全人教育</title>
   <meta name="description" content="1903年設立の緑風高等学院は、敬天愛人を校是とし、高い教養と品格を育む全人教育を実践。最新の入試情報、学校生活、施設、教育方針はこちら。" />
+  <meta name="theme-color" content="#0A1E40" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="canonical" href="https://ryokufu-academy.jp/" />
   <!-- OGP -->
   <meta property="og:title" content="【公式】緑風高等学院 | 伝統と品格を育む" />
   <meta property="og:description" content="1903年設立の緑風高等学院は、敬天愛人を校是とし、高い教養と品格を育む全人教育を実践。" />
   <meta property="og:image" content="images/ogp_main.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- 外部CSS -->
   <link rel="stylesheet" href="style.css" />
-  <!-- preconnect for font (optional, system fonts prioritized) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- 外部JS（defer） -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Skip link -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <img src="images/logo.svg" alt="緑風高等学院 校章" class="logo" />
+        <img src="images/logo.svg" alt="緑風高等学院 校章" class="logo" width="56" height="56" />
         <div class="school-name">
           <h1>緑風高等学院</h1>
           <p class="catch">120年の歴史が育む、未来を拓く全人教育。</p>
         </div>
       </div>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="メニューを開く">
-        ☰
-      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="メニューを開く">☰</button>
 
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="主要ナビゲーション">
         <ul>
@@ -51,23 +46,22 @@
   </header>
 
   <main id="main" class="site-main" tabindex="-1">
-    <!-- Top / Slider -->
     <section id="top" class="slider" aria-label="トップスライダー">
       <div class="slides" data-autoplay="7000" aria-live="polite">
-        <div class="slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="本館外観">
-          <img src="images/slider_main_1.jpg" alt="1910年築の緑風高等学院本館外観。深緑のレンガが特徴">
+        <div class="slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="本館外観" aria-hidden="false">
+          <img src="images/slider_main_1.jpg" alt="1910年築の緑風高等学院本館外観。深緑のレンガが特徴" loading="eager">
           <div class="caption">1903年、敬天愛人を胸に。120年の歴史が育む、未来を拓く全人教育。</div>
         </div>
-        <div class="slide" data-index="1" role="group" aria-roledescription="slide" aria-label="ラーニングコモンズ">
-          <img src="images/slider_main_2.jpg" alt="最新鋭のラーニングコモンズでディスカッションする生徒たち">
+        <div class="slide" data-index="1" role="group" aria-roledescription="slide" aria-label="ラーニングコモンズ" aria-hidden="true">
+          <img src="images/slider_main_2.jpg" alt="最新鋭のラーニングコモンズでディスカッションする生徒たち" loading="lazy">
           <div class="caption">伝統と革新の融合。真の探究を可能にする最新鋭の学習環境。</div>
         </div>
-        <div class="slide" data-index="2" role="group" aria-roledescription="slide" aria-label="伝統文化授業">
-          <img src="images/slider_main_3.jpg" alt="和室で茶道を学ぶ女子生徒と講師">
+        <div class="slide" data-index="2" role="group" aria-roledescription="slide" aria-label="伝統文化授業" aria-hidden="true">
+          <img src="images/slider_main_3.jpg" alt="和室で茶道を学ぶ女子生徒と講師" loading="lazy">
           <div class="caption">日本の美と品格を学ぶ。必修「伝統文化」が養う豊かな教養。</div>
         </div>
-        <div class="slide" data-index="3" role="group" aria-roledescription="slide" aria-label="スポーツ活動">
-          <img src="images/slider_main_4.jpg" alt="広大なグラウンドで運動部の練習をする生徒たち">
+        <div class="slide" data-index="3" role="group" aria-roledescription="slide" aria-label="スポーツ活動" aria-hidden="true">
+          <img src="images/slider_main_4.jpg" alt="広大なグラウンドで運動部の練習をする生徒たち" loading="lazy">
           <div class="caption">自律の精神を鍛える。文武両道を超えた「心技体」の探求。</div>
         </div>
       </div>
@@ -82,13 +76,18 @@
         </div>
         <button class="next" aria-label="次のスライド">›</button>
       </div>
+
+      <noscript>
+        <div class="noscript-note">JavaScript が無効です。スライダーは動作しませんが、主要コンテンツは引き続き閲覧可能です。</div>
+      </noscript>
     </section>
 
-    <!-- Study / accordion -->
+    <!-- 以下、学び・生活・施設・入試・お問い合わせ（テキストは既定どおり） -->
+    <!-- 学院の学び -->
     <section id="study" class="section container" aria-labelledby="study-title">
       <h2 id="study-title">学院の学び</h2>
       <p>特進コース・教養コース・風早学（探求活動）を中心に、少人数制とPBLを組み合わせた全人教育を実践しています。</p>
-      <div class="accordion" id="accordion-study">
+      <div class="accordion" id="accordion-study" aria-live="polite">
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">特進コースの特色</button>
           <div class="accordion-panel" hidden>
@@ -114,43 +113,43 @@
       </div>
     </section>
 
-    <!-- Life -->
+    <!-- 学院生活 -->
     <section id="life" class="section container" aria-labelledby="life-title">
       <h2 id="life-title">学院生活</h2>
       <p>クラブ活動や行事を通して礼節と自律を育みます。運動部12、文化部15が活動中です。</p>
       <div class="gallery">
-        <figure><img src="images/life_club_soccer.jpg" alt="サッカー部 活動風景"><figcaption>サッカー部</figcaption></figure>
-        <figure><img src="images/life_club_tea.jpg" alt="茶道部 授業風景"><figcaption>茶道部</figcaption></figure>
-        <figure><img src="images/life_event_festival.jpg" alt="創立記念祭の様子"><figcaption>創立記念祭</figcaption></figure>
+        <figure><img src="images/life_club_soccer.jpg" alt="サッカー部 活動風景" loading="lazy"><figcaption>サッカー部</figcaption></figure>
+        <figure><img src="images/life_club_tea.jpg" alt="茶道部 授業風景" loading="lazy"><figcaption>茶道部</figcaption></figure>
+        <figure><img src="images/life_event_festival.jpg" alt="創立記念祭の様子" loading="lazy"><figcaption>創立記念祭</figcaption></figure>
       </div>
     </section>
 
-    <!-- Facilities -->
+    <!-- 施設 -->
     <section id="facilities" class="section container" aria-labelledby="facilities-title">
       <h2 id="facilities-title">施設・環境</h2>
       <div class="facility-list">
         <article>
-          <img src="images/facility_honkan.jpg" alt="本館（1910年竣工、有形文化財）">
+          <img src="images/facility_honkan.jpg" alt="本館（1910年竣工、有形文化財）" loading="lazy">
           <h3>本館（登録有形文化財）</h3>
           <p>1910年竣工。重厚な石造りとステンドグラスが学院の象徴です。</p>
         </article>
         <article>
-          <img src="images/facility_comons.jpg" alt="ラーニングコモンズ内部">
+          <img src="images/facility_comons.jpg" alt="ラーニングコモンズ内部" loading="lazy">
           <h3>ラーニングコモンズ</h3>
           <p>2018年竣工。グループワークやディスカッションに最適な最新設備を備えます。</p>
         </article>
         <article>
-          <img src="images/facility_tea_room.jpg" alt="茶室 松風庵">
+          <img src="images/facility_tea_room.jpg" alt="茶室 松風庵" loading="lazy">
           <h3>茶室「松風庵」</h3>
           <p>伝統文化の学びの拠点。静謐な空間で作法を学びます。</p>
         </article>
       </div>
     </section>
 
-    <!-- Admission -->
+    <!-- 入試 -->
     <section id="admission" class="section container" aria-labelledby="admission-title">
       <h2 id="admission-title">入試情報</h2>
-      <div class="accordion" id="accordion-admission">
+      <div class="accordion" id="accordion-admission" aria-live="polite">
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">募集要項</button>
           <div class="accordion-panel" hidden>
@@ -183,8 +182,13 @@
       <h2 id="contact-title">お問い合わせ</h2>
       <p>ご質問・資料請求・説明会予約はこちらからお問い合わせください。</p>
 
-      <!-- Formspree のエンドポイントは実運用時に差し替え -->
-      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" novalidate>
+      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <!-- honeypot -->
+        <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <!-- subject -->
+        <input type="hidden" name="_subject" value="緑風学院サイト問い合わせ" />
+
         <div class="form-grid">
           <label>氏名（漢字）<span class="req">*</span>
             <input type="text" name="name_kanji" required aria-required="true" />
@@ -205,7 +209,7 @@
           <label>お住まいの地域（都道府県） <span class="req">*</span>
             <select name="prefecture" required>
               <option value="">選択してください</option>
-              <option>東京都</option><option>大阪府</option><option>北海道</option><!-- 全都道府県を追加してください -->
+              <option>東京都</option><option>大阪府</option><option>北海道</option>
             </select>
           </label>
 
@@ -238,6 +242,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>〒000-0000 風早市文京区緑風台1-5-1（架空）｜JR風早線「風早駅」よりバス15分</p>
+      <p><a href="privacy.html">プライバシーポリシー</a></p>
       <p>&copy; <span id="year"></span> 緑風高等学院 All Rights Reserved.</p>
     </div>
   </footer>
